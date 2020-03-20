@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>temporary</title>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="form-container sign-up-container">
+			<form action="register" method="post">
+				{% csrf_token %}
+				<h1>Create Account</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-github"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>Or use your Email for registration</span>
+				<input type="text" name='username' placeholder="Name" />
+				<input type="email" name='email' placeholder="Email" />
+				<input type="password" name='password1' placeholder="Password" />
+				<input type="password" name='password2' placeholder="Confirm Password" />					
+				<button>Sign Up</button>
+					{% for message in messages %}
+						<div class="">
+							<h3>{{ message }} </h3><p>alert!</p>
+						</div>
+					{% endfor %}
+			</form>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="sweetalert2.all.min.js"></script>
+	<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	{% load sweetify %}
+	{% sweetify %}
+</body>
+</html>

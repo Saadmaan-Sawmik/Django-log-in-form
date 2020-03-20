@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>temporary</title>
+</head>
+<body>
+	<div class="container">
+		<div class="form-container sign-up-container">
+			<form action="register" method="post">
+				{% csrf_token %}
+				<h1>Create Account</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-github"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>Or use your Email for registration</span>
+				<input type="text" name='username' placeholder="Name" />
+				<input type="email" name='email' placeholder="Email" />
+				<input type="password" name='password1' placeholder="Password" />
+				<input type="password" name='password2' placeholder="Confirm Password" />					
+				<button>Sign Up</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
