@@ -5,7 +5,7 @@
 ### Overview
 ___
 This is a user login-signup form I've worked on a while ago. I took the app 
-functionality further and implemented Django core to it. Yet, It has some final surgery to done. Nevertheless It works Perfectly.
+functionality further and implemented Django core to it. Yet, It has some final surgery to done. Nevertheless It works Perfectly. And looks pretty as well
 
 ### Prerequisites
 ___
